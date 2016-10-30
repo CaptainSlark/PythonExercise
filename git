@@ -1,3 +1,6 @@
+git init
+
+
 git branch experimental
  
 
@@ -12,7 +15,9 @@ git branch -d experimental
 
 
 撒销一个合并
-git reset --hard HEAD
+git reset --hard HEAD^		^^上上个版本		～100 100个版本
+git reflog显示操作历史	git reset  –hard 版本号
+git checkout — readme.txt
 
 
 git diff 会显示当前你所有已做的但没有加入到索引里的修改
@@ -21,3 +26,22 @@ git diff master experimental
 
 git pull命令的作用是，取回远程主机某个分支的更新，再与本地的指定分支合并。
 git pull /tmp/myrepo master
+
+
+git log --pretty=oneline
+
+
+cat查看内容
+
+
+git clone
+
+
+git stash将当前工作隐藏		返回分支后get stash list pop
+
+
+
+多人合作
+git checkout  –b dev origin/dev拉下远程dev分支
+git branch --set-upstream dev origin/dev	git pull	更新分支
+有冲突，手动cat查看，修改，git add,git commit, git push
