@@ -1,0 +1,23 @@
+git branch experimental
+ 
+
+git checkout experimental
+git add file1		*
+git commit -m "update file1"
+git push origin master
+
+git merge  -m 'merge experimental branch' experimental
+
+git branch -d experimental
+
+
+撒销一个合并
+git reset --hard HEAD
+
+
+git diff 会显示当前你所有已做的但没有加入到索引里的修改
+git diff master experimental
+
+
+git pull命令的作用是，取回远程主机某个分支的更新，再与本地的指定分支合并。
+git pull /tmp/myrepo master
