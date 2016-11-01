@@ -45,3 +45,11 @@ git stash将当前工作隐藏		返回分支后get stash list pop
 git checkout  –b dev origin/dev拉下远程dev分支
 git branch --set-upstream dev origin/dev	git pull	更新分支
 有冲突，手动cat查看，修改，git add,git commit, git push
+
+
+echo "# tyryyryry" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/CaptainSlark/tyryyryry.git
+git push -u origin master
